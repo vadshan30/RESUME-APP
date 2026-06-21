@@ -1,0 +1,13 @@
+{
+  "formal": {
+    "opening": "Dear Hiring Manager,",
+    "body_template": "I am writing to express my interest in the {role} position at your company. With my background in {skills}, I am confident that I would be a valuable addition to your team.\n\nIn my previous experience, I have successfully {achievement}. My expertise in {key_skills} aligns perfectly with the requirements of this role.\n\nI am particularly drawn to this opportunity because {reason}. I am excited about the possibility of contributing to your team and would welcome the opportunity to discuss how my skills and experience can benefit your organization.",
+    "closing": "Sincerely,\n{name}"
+  },
+  "casual": {
+    "opening": "Hi there,",
+    "body_template": "I'm excited to apply for the {role} position! I've been working with {skills} for {experience} years, and I think I'd be a great fit for your team.\n\nWhat really excites me about this role is {reason}. I've worked on projects involving {key_skills}, and I'm looking forward to bringing that experience to your company.\n\nI'd love to chat more about how I can contribute to your team!",
+    "closing": "Best regards,\n{name}"
+  }
+}
+

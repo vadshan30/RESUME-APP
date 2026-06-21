@@ -1,0 +1,136 @@
+{
+  "technical": [
+    {
+      "question": "What is the difference between JRE, JDK, and JVM?",
+      "answer": "JVM is the virtual machine that runs Java bytecodes. JRE is the runtime environment that contains JVM and libraries. JDK is the development kit that contains JRE plus development tools like compiler.",
+      "category": "Java",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Explain the concept of OOP in Java.",
+      "answer": "Object-Oriented Programming revolves around four main concepts: Encapsulation (hiding data), Inheritance (reusing code from parent classes), Polymorphism (one interface, many implementations), and Abstraction (hiding implementation details).",
+      "category": "Java",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What is a concurrent collection in Java?",
+      "answer": "Concurrent collections (like ConcurrentHashMap, CopyOnWriteArrayList) are designed for thread-safe operations in multithreaded environments without needing explicit synchronization blocks.",
+      "category": "Java",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Explain Java Memory Model and Garbage Collection.",
+      "answer": "JMM defines how variables are stored in memory and accessed by threads. Garbage Collection automatically handles memory management by identifying and disposing of objects that are no longer referenced.",
+      "category": "Java",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "What are lists and tuples in Python?",
+      "answer": "Lists are mutable sequences, meaning they can be changed after creation. Tuples are immutable sequences, meaning they cannot be modified once created.",
+      "category": "Python",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Explain decorators in Python.",
+      "answer": "A decorator is a design pattern that allows a user to add new functionality to an existing object without modifying its structure. They are usually called before the definition of a function you want to decorate.",
+      "category": "Python",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "How does Python handle memory management?",
+      "answer": "Python uses a private heap containing all objects. The memory manager handles allocation. It also has an inbuilt garbage collector, primarily using reference counting and a cyclic garbage collector to reclaim unused memory.",
+      "category": "Python",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "What is the Global Interpreter Lock (GIL) in Python?",
+      "answer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. This makes CPython thread-safe but limits multithreaded performance on CPU-bound tasks.",
+      "category": "Python",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "Explain the difference between REST and GraphQL.",
+      "answer": "REST is an architectural style using HTTP methods and endpoints, while GraphQL is a query language that allows clients to request exactly the data they need. REST returns fixed data structures, while GraphQL provides flexibility in data fetching.",
+      "category": "General",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "What is the difference between SQL and NoSQL databases?",
+      "answer": "SQL databases are relational with structured schemas, while NoSQL databases are non-relational and flexible. SQL is better for complex queries, NoSQL for scalability and flexibility.",
+      "category": "General",
+      "difficulty": "Beginner"
+    }
+  ],
+  "hr": [
+    {
+      "question": "Why do you want to work for our company?",
+      "answer": "Focus on your alignment with the company's mission, values, and products. Research recent news and express genuine interest in the company's trajectory.",
+      "category": "HR",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Where do you see yourself in 5 years?",
+      "answer": "Connect your long-term goals with the role you are applying for. Emphasize your desire to learn, grow into leadership or specialization, and contribute value.",
+      "category": "HR",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What are your salary expectations?",
+      "answer": "Be prepared with market research for the role and location. State a range or say you're flexible and want to learn more about the complete compensation package.",
+      "category": "HR",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Why should we hire you over other candidates?",
+      "answer": "Summarize your unique mix of technical skills, soft skills, and relevant experience that specifically addresses the core needs mentioned in the job description.",
+      "category": "HR",
+      "difficulty": "Advanced"
+    }
+  ],
+  "behavioral": [
+    {
+      "question": "Tell me about a time you faced a difficult technical challenge. How did you solve it?",
+      "answer": "Use the STAR method: Situation, Task, Action, Result. Describe a specific challenge, explain your approach, actions taken, and the outcome. Emphasize problem-solving and learning.",
+      "category": "Behavioral",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Describe a situation where you had to work with a difficult team member.",
+      "answer": "Focus on communication, empathy, and conflict resolution. Show how you maintained professionalism and found common ground to achieve team goals.",
+      "category": "Behavioral",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Tell me about a time you failed and what you learned from it.",
+      "answer": "Choose a real failure, explain the context, take accountability, and focus heavily on what you learned and how you changed your approach afterward.",
+      "category": "Behavioral",
+      "difficulty": "Advanced"
+    },
+    {
+      "question": "How do you handle tight deadlines and pressure?",
+      "answer": "Discuss time management, prioritization, and stress management techniques. Provide a specific example of successfully delivering under pressure.",
+      "category": "Behavioral",
+      "difficulty": "Beginner"
+    }
+  ],
+  "situational": [
+    {
+      "question": "How would you approach learning a new technology or framework?",
+      "answer": "Discuss your learning process: documentation review, hands-on practice, building projects, seeking help from communities, and continuous practice.",
+      "category": "Situational",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "What would you do if you discovered a critical bug in production?",
+      "answer": "Explain your incident response: assess impact, communicate with team, implement hotfix, test thoroughly, deploy, and conduct post-mortem to prevent recurrence.",
+      "category": "Situational",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "How would you handle a situation where business requirements keep changing midway through a sprint?",
+      "answer": "Focus on agile principles. Emphasize communication with stakeholders, prioritizing changes, assessing impact on current sprint goals, and adjusting scope or timelines accordingly.",
+      "category": "Situational",
+      "difficulty": "Advanced"
+    }
+  ]
+}

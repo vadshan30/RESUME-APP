@@ -1,0 +1,13 @@
+User Input:
+Pregnancies: 2
+Glucose: 150
+BloodPressure: 70
+SkinThickness: 30
+Insulin: 100
+BMI: 35.0
+DiabetesPedigreeFunction: 0.5
+Age: 45
+
+System Output:
+Prediction: High Risk of Diabetes
+Probability: 0.70

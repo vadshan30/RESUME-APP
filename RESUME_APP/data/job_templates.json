@@ -1,0 +1,94 @@
+[
+  {
+    "role": "Software Engineer",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Python", "JavaScript", "React", "SQL", "Git", "REST API", "Problem Solving"],
+    "description": "Develop and maintain web applications using modern technologies"
+  },
+  {
+    "role": "Full Stack Developer",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["JavaScript", "React", "Node.js", "SQL", "MongoDB", "Git", "REST API"],
+    "description": "Build end-to-end web applications with frontend and backend expertise"
+  },
+  {
+    "role": "Data Scientist",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Python", "Machine Learning", "Data Analysis", "SQL", "Pandas", "NumPy"],
+    "description": "Analyze data and build machine learning models"
+  },
+  {
+    "role": "DevOps Engineer",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux", "Git", "Jenkins"],
+    "description": "Manage infrastructure and deployment pipelines"
+  },
+  {
+    "role": "Frontend Developer",
+    "industry": "Technology",
+    "level": "Entry",
+    "required_skills": ["HTML", "CSS", "JavaScript", "React", "Git", "Responsive Design"],
+    "description": "Create user interfaces and frontend experiences"
+  },
+  {
+    "role": "Backend Developer",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Python", "Node.js", "SQL", "REST API", "Git", "Database Design"],
+    "description": "Build server-side applications and APIs"
+  },
+  {
+    "role": "Product Manager",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Project Management", "Communication", "Strategic Thinking", "Agile", "Scrum"],
+    "description": "Lead product development and strategy"
+  },
+  {
+    "role": "UI/UX Designer",
+    "industry": "Design",
+    "level": "Mid",
+    "required_skills": ["User Experience", "User Interface", "Design Tools", "Prototyping", "Creativity"],
+    "description": "Design user interfaces and experiences"
+  },
+  {
+    "role": "Cloud Architect",
+    "industry": "Technology",
+    "level": "Senior",
+    "required_skills": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "Architecture"],
+    "description": "Design and implement cloud infrastructure solutions"
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "industry": "Technology",
+    "level": "Mid",
+    "required_skills": ["Python", "Machine Learning", "TensorFlow", "PyTorch", "Data Science", "SQL"],
+    "description": "Build and deploy machine learning models"
+  },
+  {
+    "role": "Junior Web Developer",
+    "industry": "Technology",
+    "level": "Entry",
+    "required_skills": ["HTML", "CSS", "JavaScript", "Git", "Problem Solving"],
+    "description": "Entry-level position for web development with basic programming skills"
+  },
+  {
+    "role": "Data Analyst",
+    "industry": "Technology",
+    "level": "Entry",
+    "required_skills": ["Excel", "SQL", "Data Analysis", "Communication", "Problem Solving"],
+    "description": "Analyze business data and create reports for decision making"
+  },
+  {
+    "role": "Technical Support Specialist",
+    "industry": "Technology",
+    "level": "Entry",
+    "required_skills": ["Customer Service", "Problem Solving", "Communication", "Technical Writing"],
+    "description": "Provide technical support and troubleshooting for customers"
+  }
+]
+

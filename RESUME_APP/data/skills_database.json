@@ -1,0 +1,44 @@
+{
+  "technical_skills": {
+    "programming_languages": [
+      "Python", "JavaScript", "Java", "C++", "C#", "Ruby", "Go", "Rust", "Swift", "Kotlin",
+      "TypeScript", "PHP", "Perl", "Scala", "R", "MATLAB", "SQL", "HTML", "CSS", "Dart"
+    ],
+    "web_frameworks": [
+      "React", "Vue.js", "Angular", "Django", "Flask", "Express", "Spring", "Laravel",
+      "Ruby on Rails", "ASP.NET", "Next.js", "Nuxt.js", "Svelte", "Ember.js"
+    ],
+    "databases": [
+      "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle", "SQL Server",
+      "Cassandra", "Elasticsearch", "DynamoDB", "Firebase", "Neo4j"
+    ],
+    "cloud_platforms": [
+      "AWS", "Azure", "Google Cloud", "Heroku", "DigitalOcean", "Vercel", "Netlify",
+      "Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "CI/CD"
+    ],
+    "tools_technologies": [
+      "Git", "GitHub", "GitLab", "JIRA", "Confluence", "Slack", "Docker", "Kubernetes",
+      "Linux", "Windows", "macOS", "REST API", "GraphQL", "Microservices", "Agile", "Scrum"
+    ],
+    "data_science": [
+      "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Pandas", "NumPy",
+      "Scikit-learn", "Data Analysis", "Data Visualization", "Tableau", "Power BI"
+    ],
+    "mobile": [
+      "iOS Development", "Android Development", "React Native", "Flutter", "Xamarin",
+      "Swift", "Kotlin", "Mobile App Development"
+    ]
+  },
+  "soft_skills": [
+    "Communication", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking",
+    "Time Management", "Project Management", "Adaptability", "Creativity", "Work Ethic",
+    "Collaboration", "Conflict Resolution", "Negotiation", "Presentation Skills",
+    "Customer Service", "Mentoring", "Strategic Thinking", "Decision Making"
+  ],
+  "certifications": [
+    "AWS Certified", "Google Cloud Certified", "Microsoft Certified", "Cisco Certified",
+    "PMP", "Scrum Master", "Agile Certified", "CompTIA", "Oracle Certified",
+    "Salesforce Certified", "Tableau Certified", "Data Science Certification"
+  ]
+}
+

@@ -1,0 +1,22 @@
+[
+    {
+        "type": "email_summary",
+        "time": "08:00",
+        "active": true
+    },
+    {
+        "type": "email_summary",
+        "time": "23:17",
+        "active": true
+    },
+    {
+        "type": "email_summary",
+        "time": "08:00",
+        "active": true
+    },
+    {
+        "type": "email_summary",
+        "time": "08:00",
+        "active": true
+    }
+]

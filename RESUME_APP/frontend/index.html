@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assistant - AI-Powered Resume Analysis</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎯 Career Assistant</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">🏠 Home</a></li>
+                <li><a href="#upload" class="nav-link">📄 Analyze Resume</a></li>
+                <li><a href="#ats" class="nav-link">🎯 ATS Analysis</a></li>
+                <li><a href="#match" class="nav-link">💼 Job Matching</a></li>
+                <li><a href="#skill-gap" class="nav-link">📈 Skill Gap Analysis</a></li>
+                <li><a href="#career" class="nav-link">🛣 Career Roadmap</a></li>
+                <li><a href="#learning" class="nav-link">📚 Learning Hub</a></li>
+                <li><a href="#interview" class="nav-link">🎤 Interview Prep</a></li>
+                <li><a href="#dashboard" class="nav-link">📊 Dashboard</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h2>AI-Powered Career Intelligence Platform</h2>
+                    <p>Improve your employability with intelligent resume analysis, job matching, and career guidance.</p>
+                    <div class="hero-features">
+                        <div class="feature-card" onclick="showSection('upload')" style="cursor: pointer;">
+                            <h3>📄 Resume Analysis</h3>
+                            <p>Extract skills and identify strengths</p>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="event.stopPropagation(); showSection('upload');">Analyze Resume</button>
+                        </div>
+                        <div class="feature-card" onclick="showSection('match')" style="cursor: pointer;">
+                            <h3>🎯 Job Matching</h3>
+                            <p>Calculate compatibility with job descriptions</p>
+                            <button class="btn btn-primary" data-requires-resume="true" style="margin-top: 1rem; width: 100%;" onclick="event.stopPropagation(); showSection('match');">Match Jobs</button>
+                        </div>
+                        <div class="feature-card" onclick="showSection('recommendations')" style="cursor: pointer;">
+                            <h3>💼 Recommendations</h3>
+                            <p>Get personalized job role suggestions</p>
+                            <button class="btn btn-primary" data-requires-resume="true" style="margin-top: 1rem; width: 100%;" onclick="event.stopPropagation(); getRecommendations();">Get Recommendations</button>
+                        </div>
+                        <div class="feature-card" onclick="showSection('dashboard')" style="cursor: pointer;">
+                            <h3>📊 Analytics</h3>
+                            <p>Track your resume strength and progress</p>
+                            <button class="btn btn-primary" data-requires-resume="true" style="margin-top: 1rem; width: 100%;" onclick="event.stopPropagation(); showSection('dashboard');">View Dashboard</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="showSection('upload')" style="margin-top: 2rem;">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload" class="section">
+            <div class="container">
+                <h2>Upload Your Resume</h2>
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="resumeFile" accept=".pdf,.txt" style="display: none;">
+                        <div class="upload-content">
+                            <div class="upload-icon">📄</div>
+                            <p>Drag and drop your resume here</p>
+                            <p class="upload-hint">or click to browse</p>
+                            <p class="upload-formats">Supports: PDF, TXT (Max 10MB)</p>
+                        </div>
+                    </div>
+                    <div id="uploadResult" class="upload-result" style="display: none;">
+                        <h3>Resume Analysis</h3>
+                        <div id="resumeSkills" class="skills-display"></div>
+                        <div id="resumeText" class="resume-text-preview" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Matching Section -->
+        <section id="match" class="section">
+            <div class="container">
+                <h2>Job Matching</h2>
+                <div class="match-container">
+                    <div class="match-input">
+                        <label for="jobDescription">Paste Job Description</label>
+                        <textarea id="jobDescription" rows="10" placeholder="Paste the job description here..."></textarea>
+                        <button class="btn btn-primary" onclick="matchResume()">Analyze Match</button>
+                    </div>
+                    <div id="matchResult" class="match-result" style="display: none;">
+                        <div class="match-score">
+                            <h3>Compatibility Score</h3>
+                            <div class="score-circle" id="matchPercentage">0%</div>
+                        </div>
+                        <div class="match-details">
+                            <div class="skills-list matching">
+                                <h4>✅ Matching Skills</h4>
+                                <div id="matchingSkills"></div>
+                            </div>
+                            <div class="skills-list missing">
+                                <h4>❌ Missing Skills</h4>
+                                <div id="missingSkills"></div>
+                            </div>
+                            <div class="skills-list extra">
+                                <h4>➕ Extra Skills</h4>
+                                <div id="extraSkills"></div>
+                            </div>
+                        </div>
+                        <div id="suggestions" class="suggestions"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="section">
+            <div class="container">
+                <h2>Job Recommendations</h2>
+                <div class="recommendations-controls">
+                    <button class="btn btn-primary" onclick="getRecommendations()">Get Recommendations</button>
+                </div>
+                <div id="recommendationsList" class="recommendations-list">
+                    <div style="padding: 2rem; text-align: center; color: var(--text-secondary);">
+                        <p>Click "Get Recommendations" to see job suggestions based on your skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interview Prep Section -->
+        <section id="interview" class="section">
+            <div class="container">
+                <h2>Interview Preparation</h2>
+                <div class="interview-container">
+                    <div class="interview-form" style="background: var(--surface-color); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="interviewTopic" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Topic or Role</label>
+                            <input type="text" id="interviewTopic" placeholder="e.g., Java, Python, Frontend Developer" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: var(--border-radius);">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="interviewDifficulty" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Difficulty Level</label>
+                            <select id="interviewDifficulty" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--bg-color);">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate" selected>Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="interviewJobDesc" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Job Description (Optional)</label>
+                            <textarea id="interviewJobDesc" rows="3" placeholder="Paste job description for customized questions..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: var(--border-radius);"></textarea>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateInterviewQuestions()" style="width: 100%;">Generate Questions</button>
+                    </div>
+                    
+                    <div id="interviewResults" class="interview-results" style="display: none;">
+                        <div class="interview-tabs" style="display: flex; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-color);">
+                            <button class="tab-btn active" onclick="switchInterviewTab('technical')">Technical</button>
+                            <button class="tab-btn" onclick="switchInterviewTab('hr')">HR</button>
+                            <button class="tab-btn" onclick="switchInterviewTab('behavioral')">Behavioral</button>
+                        </div>
+                        <div class="tab-content" id="tab-technical" style="display: block;"></div>
+                        <div class="tab-content" id="tab-hr" style="display: none;"></div>
+                        <div class="tab-content" id="tab-behavioral" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Path Section -->
+        <section id="career" class="section">
+            <div class="container">
+                <h2>Career Path Analysis</h2>
+                <div class="career-container">
+                    <input type="text" id="targetRole" placeholder="Enter target role (optional)">
+                    <button class="btn btn-primary" onclick="analyzeCareerPath()">Analyze Career Path</button>
+                    <div id="careerAnalysis" class="career-analysis"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover Letter Section -->
+        <section id="cover-letter" class="section">
+            <div class="container">
+                <h2>Cover Letter Generator</h2>
+                <div class="cover-letter-container">
+                    <textarea id="coverLetterJobDesc" rows="5" placeholder="Paste job description..."></textarea>
+                    <input type="text" id="applicantName" placeholder="Your Name">
+                    <select id="coverLetterTone">
+                        <option value="formal">Formal</option>
+                        <option value="casual">Casual</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="generateCoverLetter()">Generate Cover Letter</button>
+                    <div id="coverLetterResult" class="cover-letter-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATS Analysis Section -->
+        <section id="ats" class="section">
+            <div class="container">
+                <h2>🎯 ATS Analysis</h2>
+                <div style="background: var(--surface-color); padding: 3rem; border-radius: var(--border-radius); text-align: center; box-shadow: var(--shadow-sm); margin-top: 2rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">This feature is coming soon! Check back later for advanced ATS scoring.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Gap Analysis Section -->
+        <section id="skill-gap" class="section">
+            <div class="container">
+                <h2>📈 Skill Gap Analysis</h2>
+                <div style="background: var(--surface-color); padding: 3rem; border-radius: var(--border-radius); text-align: center; box-shadow: var(--shadow-sm); margin-top: 2rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">This feature is coming soon! Identify exactly what you need to learn for your target role.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Hub Section -->
+        <section id="learning" class="section">
+            <div class="container">
+                <h2>📚 Learning Hub</h2>
+                <div style="background: var(--surface-color); padding: 3rem; border-radius: var(--border-radius); text-align: center; box-shadow: var(--shadow-sm); margin-top: 2rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">This feature is coming soon! Access curated courses to bridge your skill gaps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <div class="container">
+                <h2>Analytics Dashboard</h2>
+                <div class="dashboard-container">
+                    <div class="dashboard-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div class="stat-card premium-card">
+                            <h3>ATS Score</h3>
+                            <div class="stat-value" id="strengthScore">0</div>
+                        </div>
+                        <div class="stat-card premium-card">
+                            <h3>Skills Found</h3>
+                            <div class="stat-value" id="totalSkills">0</div>
+                        </div>
+                        <div class="stat-card premium-card">
+                            <h3>Jobs Matched</h3>
+                            <div class="stat-value" id="jobsMatched">0</div>
+                        </div>
+                        <div class="stat-card premium-card">
+                            <h3>Missing Skills</h3>
+                            <div class="stat-value" id="missingSkillsCount">0</div>
+                        </div>
+                        <div class="stat-card premium-card">
+                            <h3>Career Readiness</h3>
+                            <div class="stat-value" id="careerReadiness">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-charts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div class="chart-container premium-card">
+                            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-secondary);">Skill Distribution</h3>
+                            <canvas id="skillsChart" width="400" height="300"></canvas>
+                        </div>
+                        <div class="chart-container premium-card">
+                            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-secondary);">ATS Trend</h3>
+                            <canvas id="atsTrendChart" width="400" height="300"></canvas>
+                        </div>
+                        <div class="chart-container premium-card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; width: 100%;">
+                            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-secondary);">Job Match Trend</h3>
+                            <canvas id="jobMatchChart" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Career Assistant. Built with ❤️ for job seekers.</p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/matching.js"></script>
+    <script src="js/recommendations.js"></script>
+    <script src="js/interview.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/cover-letter.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

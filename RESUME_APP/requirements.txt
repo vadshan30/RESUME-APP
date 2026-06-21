@@ -1,0 +1,7 @@
+# Root-level requirements.txt for convenience
+# This file points to backend/requirements.txt
+# Use: pip install -r backend/requirements.txt
+
+# For direct installation from root, use:
+# -r backend/requirements.txt
+

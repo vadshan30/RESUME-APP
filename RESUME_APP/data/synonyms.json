@@ -1,0 +1,22 @@
+{
+  "JavaScript": ["JS", "Javascript", "ECMAScript", "ES6", "ES2015"],
+  "Python": ["Python3", "Python 3", "Py"],
+  "React": ["React.js", "ReactJS"],
+  "Node.js": ["Node", "NodeJS"],
+  "Machine Learning": ["ML", "Machine Learning", "ML/AI"],
+  "Artificial Intelligence": ["AI", "Artificial Intelligence"],
+  "Data Science": ["Data Analytics", "Data Analysis"],
+  "Project Management": ["PM", "Project Manager"],
+  "User Experience": ["UX", "User Experience Design"],
+  "User Interface": ["UI", "User Interface Design"],
+  "Application Programming Interface": ["API", "REST API", "RESTful API"],
+  "Version Control": ["Git", "Source Control"],
+  "Amazon Web Services": ["AWS", "Amazon Cloud"],
+  "Microsoft Azure": ["Azure", "MS Azure"],
+  "Google Cloud Platform": ["GCP", "Google Cloud"],
+  "Structured Query Language": ["SQL", "MySQL", "PostgreSQL"],
+  "NoSQL": ["MongoDB", "NoSQL Database"],
+  "Continuous Integration": ["CI", "CI/CD", "Continuous Deployment"],
+  "DevOps": ["Dev Ops", "Development Operations"]
+}
+

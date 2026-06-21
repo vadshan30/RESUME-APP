@@ -1,0 +1,9 @@
+typer
+rich
+google-api-python-client
+google-auth
+google-auth-oauthlib
+dateparser
+schedule
+openai
+google-genai

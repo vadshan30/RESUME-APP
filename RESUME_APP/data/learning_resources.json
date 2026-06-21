@@ -1,0 +1,39 @@
+{
+  "programming": [
+    {
+      "skill": "Python",
+      "resources": [
+        {"name": "Python.org Official Tutorial", "url": "https://docs.python.org/3/tutorial/", "type": "Free"},
+        {"name": "freeCodeCamp Python Course", "url": "https://www.freecodecamp.org/learn", "type": "Free"},
+        {"name": "Real Python", "url": "https://realpython.com", "type": "Free/Paid"}
+      ]
+    },
+    {
+      "skill": "JavaScript",
+      "resources": [
+        {"name": "MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "type": "Free"},
+        {"name": "JavaScript.info", "url": "https://javascript.info", "type": "Free"},
+        {"name": "freeCodeCamp JavaScript", "url": "https://www.freecodecamp.org/learn", "type": "Free"}
+      ]
+    }
+  ],
+  "web_development": [
+    {
+      "skill": "React",
+      "resources": [
+        {"name": "React Official Docs", "url": "https://react.dev", "type": "Free"},
+        {"name": "React Tutorial by freeCodeCamp", "url": "https://www.freecodecamp.org/learn", "type": "Free"}
+      ]
+    }
+  ],
+  "data_science": [
+    {
+      "skill": "Machine Learning",
+      "resources": [
+        {"name": "Coursera ML Course (Andrew Ng)", "url": "https://www.coursera.org/learn/machine-learning", "type": "Free"},
+        {"name": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "type": "Free"}
+      ]
+    }
+  ]
+}
+
